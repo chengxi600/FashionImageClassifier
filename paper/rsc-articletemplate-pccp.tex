@@ -117,23 +117,24 @@
 %%%END OF FIGURE SETUP%%%
 
 %%%TITLE, AUTHORS AND ABSTRACT%%%
-\twocolumn[
-  \begin{@twocolumnfalse}
+%\twocolumn[
+\begin{@twocolumnfalse}
 \vspace{1em}
 \sffamily
 
-\hline
+\hrule
 \vspace{2em}
 \noindent\centering\LARGE{\textbf{Classifying Images of Fashion Items using Deep CNN}} \\%Article title goes here instead of the text "This is the title"
 \vspace{1em}
 \noindent\large{Cheng Xi Tsou, Ningyu Chen, and Tim Betancur}\\%Author names go here instead of "Full name", etc.
 \vspace{2em}
-\hline
+\hrule
 \vspace{1em}
 % \noindent\normalsize{The abstract should be a single paragraph which summarises the content of the article. Any references in the abstract should be written out in full \textit{e.g.}\ [Surname \textit{et al., Journal Title}, 2000, \textbf{35}, 3523].} \\%The abstrast goes here instead of the text "The abstract should be..."
 
- \end{@twocolumnfalse} \vspace{0.6cm}
-]
+\end{@twocolumnfalse}
+\vspace{0.6cm}
+%]
 
 %%%END OF TITLE, AUTHORS AND ABSTRACT%%%
 
@@ -329,6 +330,37 @@ We were unable to increase the model’s validation accuracy by hyperparameter t
   \end{tabular*}
 \end{table}
 
+\begin{table}[h]
+\small
+  \caption{\ Composition of exp5\_10\_8\_5}
+  \label{tbl:example1}
+  \begin{tabular*}{0.48\textwidth}{@{\extracolsep{\fill}}llll}
+    \hline
+    Layer (type) & Output Shape & Param \# \\
+    \hline
+    Conv         & (80, 60, 16) & 448      \\
+    Conv         & (80, 60, 16) & 2320     \\
+    Max Pool     & (40, 30, 16) & 0        \\
+    Dropout      & (40, 30, 16) & 0        \\
+    Conv         & (40, 30, 32) & 4640     \\
+    Conv         & (40, 30, 32) & 9248     \\
+    Max Pool     & (20, 15, 32) & 0        \\
+    Dropout      & (20, 15, 32) & 0        \\
+    Conv         & (20, 15, 64) & 18494    \\
+    Conv         & (20, 15, 64) & 36928    \\
+    Max Pool     & (10, 7, 64)  & 0        \\
+    Dropout      & (10, 7, 64)  & 0        \\
+    Flatten      & (4480)       & 0        \\
+    Dense        & (512)        & 2294272  \\
+    Dropout      & (512)        & 0        \\
+    Dense        & (512)        & 262656   \\
+    Dropout      & (512)        & 0        \\
+    Dense        & (512)        & 262656   \\
+    Dense        & (8)          & 4104     \\
+    \hline
+  \end{tabular*}
+\end{table}
+
 \noindent Comparing the best models of each input dimension, we found that the validation accuracy steadily increased. For the final model, we chose to use exp5\_10\_8\_5 with input dimensions of 80x60x3. An evaluation of our final model on testing data showed an accuracy of 0.913. This was much better than our baseline model which had an accuracy of 0.835. 
 
 \begin{figure}[h]
@@ -338,13 +370,13 @@ We were unable to increase the model’s validation accuracy by hyperparameter t
   \label{fgr:example}
 \end{figure}
 
-\noindent Looking at a confusion matrix (see Fig 4 below) of predictions on our final model, we found that the model did very well for classes with more distinct shapes, and poorly on classes that were similar in shape. Most notably, the pairs of classes that had the highest proportion of mislabeling as one another were Shirts and Tops, and Kurtas and T-shirts.
+\noindent Looking at a confusion matrix (see Figure 4 below) of predictions on our final model, we found that the model did very well for classes with more distinct shapes, and poorly on classes that were similar in shape. Most notably, the pairs of classes that had the highest proportion of mislabeling as one another were Shirts and Tops, and Kurtas and T-shirts.
 
-\begin{figure*}[h]
- \centering
- \includegraphics[height=7cm]{images/matrix}
- \caption{Confusion matrix of final model on testing data}
- \label{fgr:example2col}
+\begin{figure*}
+\centering
+  \includegraphics[height=6.8cm]{images/matrix}
+  \caption{Comparing the best models of each input dimension}
+  \label{fgr:example2col}
 \end{figure*}
 
 \section{Retrospective}
