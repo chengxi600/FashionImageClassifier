@@ -3,6 +3,7 @@ Built a CNN model that classifies fashion images into 8 article types based on t
 
 # Scoring of the final model
 Testing Accuracy: 0.923
+![image](https://user-images.githubusercontent.com/57016570/123311868-a11c6200-d4f5-11eb-811c-3361bdb500ac.png)
 
 # BriefDescription of the experiments
 1. Experiment 1
