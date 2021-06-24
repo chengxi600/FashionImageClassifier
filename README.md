@@ -11,7 +11,7 @@ Built a CNN model that classifies fashion images into 8 article types based on t
 # Structure of the final model
 Type: sequential
 <br>
-<div style="text-align:center"> ![image](https://user-images.githubusercontent.com/57016570/123312099-e345a380-d4f5-11eb-80ef-07174ab5af2c.png) </div>
+![image](https://user-images.githubusercontent.com/57016570/123312099-e345a380-d4f5-11eb-80ef-07174ab5af2c.png)
 <br>
 Total params: 2,895,768
 <br>
