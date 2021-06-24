@@ -11,3 +11,13 @@ Built a CNN model that classifies fashion images into 8 article types based on t
    - Changing the width of the model 
 9. Experiment 5
    - Using colored input images instead of grayscale
+
+# Labels 
+- Sports Shoes
+- Casual Shoes
+- Kurtas 
+- Tops 
+- Shirts 
+- T-shirts 
+- Watches 
+- Handbags
