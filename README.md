@@ -20,4 +20,6 @@ Trainable params: 2,895,768
 Non-trainable params: 0
 
 # Scoring of the final model
+Testing Accuracy: 0.923
+<br>
 ![image](https://user-images.githubusercontent.com/57016570/123311868-a11c6200-d4f5-11eb-811c-3361bdb500ac.png)
